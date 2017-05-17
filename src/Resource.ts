@@ -1,11 +1,19 @@
+import { ResourceNamer } from "../src/helper/ResourceNamer";
+
 export class Resource {
     name: string;
     regularPartName: string;
     parent: Resource;
 
-    constructor(name: string, regularPartName: string) {
+    /**
+     * Use when this resource can be
+     * accessed with an ID, e.g. /user/:userId
+     */
+    indexable: boolean;
+
+    constructor(name: string) {
         this.name = name;
-        this.regularPartName = regularPartName;
+        this.regularPartName = ResourceNamer.nameInPath(name);
     }
 
     public fullPath():string {
