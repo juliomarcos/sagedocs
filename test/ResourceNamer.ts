@@ -10,4 +10,9 @@ class ResourceNamer_Test_Suite {
         assert.equal(urlName, 'user');
     }
 
+    @test Two_Words_Resouce_Name_Url_Friendly() {
+        let urlName = ResourceNamer.nameInPath('PatientData');
+        assert.equal(urlName, 'patient-data');
+    }
+
 }

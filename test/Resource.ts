@@ -12,9 +12,9 @@ class Resource_Test_Suite {
 
     @test Two_Level_Resource_Path() {
         let user = new Resource('User');
-        let comment = new Resource('Comment');
+        let comment = new Resource('HighBid');
         comment.parent = user;
-        assert.equal(comment.fullPath(), '/user/comment');
+        assert.equal(comment.fullPath(), '/user/high-bid');
     }
 
     @test Three_Level_Resource_Path() {

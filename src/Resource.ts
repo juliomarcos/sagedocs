@@ -1,4 +1,4 @@
-import { ResourceNamer } from "../src/helper/ResourceNamer";
+import {ResourceNamer} from "./helper/ResourceNamer";
 
 export class Resource {
     name: string;
