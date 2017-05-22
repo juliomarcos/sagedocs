@@ -1,4 +1,4 @@
-import {suite, test, slow, timeout} from "mocha-typescript";
+import {suite, test} from "mocha-typescript";
 import {assert} from 'chai';
 import {ResourceNamer} from "../src/helper/ResourceNamer";
 
