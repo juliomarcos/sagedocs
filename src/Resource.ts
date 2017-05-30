@@ -53,7 +53,11 @@ export class Resource {
     }
 
     get indexName(): string {
-        return this._indexName;
+        if (this._indexName === undefined) {
+            return this.regularPartName;
+        } else {
+            return this._indexName;
+        }
     }
 
     private getIndexablePartName() {

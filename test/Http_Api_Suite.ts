@@ -19,12 +19,7 @@ class Test_Http_Api {
             user
         ]);
 
-        assert.fileContent('./test/html/sample-header.html', api.docs(), 'sample header');
-        // assert.equal(
-        //     `<h1>Commenting API</h1>` +
-        //     `<p>Used by ACME app to host users comments. Has token based authentication.</p>` +
-        //     `<h2>Resource User</h2>`
-        //     , api.docs());
+        assert.fileContent('./test/html/sample-header-nav.html', api.docs(), 'sample header & nav');
     }
 
 }

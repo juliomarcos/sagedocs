@@ -11,7 +11,11 @@ export class ResourceHtmlBuilder implements Docs {
         return this.resource.name;
     }
 
+    navLink() {
+        return `<a href="#resource-${this.resource.indexName}"><h2>Resource ${this.header()}</h2></a>`;
+    }
+
     docs() {
-        return `<h2>Resource ${this.header()}</h2>`;
+        return "TODO docs();"
     };
 }

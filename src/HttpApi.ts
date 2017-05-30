@@ -28,16 +28,31 @@ export class HttpApi implements Api {
      * Move to a HttpApiHeaderBuilder
      */
     private header() {
-        return `<h1>${this.title} API</h1>\n` +
-               `<p>${this.description}</p>`;
+        return  `<header>\n` +
+                `    <h1>${this.title} API</h1>\n` +
+                `    <p>${this.description}</p>\n` +
+                `</header>`
+    }
+
+    /**
+     * Move to a HttpApiNavBuilder
+     * @returns {string}
+     */
+    private nav() {
+        let cache = ['<nav>'];
+        for (let res of this.resources) {
+            let resourceHtmlBuilder = new ResourceHtmlBuilder(res);
+            cache.push('    ' + resourceHtmlBuilder.navLink())
+        }
+        cache.push('</nav>');
+        return cache.join('\n');
     }
 
     public docs() {
-        let cache = [this.header()];
-        for (let res of this.resources) {
-            let resourceHtmlBuilder = new ResourceHtmlBuilder(res);
-            cache.push(resourceHtmlBuilder.docs())
-        }
+        let cache = [
+            this.header(),
+            this.nav(),
+        ];
         return cache.join('\n');
     }
 }
