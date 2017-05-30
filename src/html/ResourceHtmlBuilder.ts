@@ -1,7 +1,7 @@
-import {Resource} from "../Resource";
-import {Docs} from "../Docs";
+import { Resource } from "../Resource";
+import { Docs } from "../Docs";
 export class ResourceHtmlBuilder implements Docs {
-    readonly resource:Resource;
+    readonly resource: Resource;
 
     constructor(resource: Resource) {
         this.resource = resource;

@@ -28,7 +28,7 @@ export class HttpApi implements Api {
      * Move to a HttpApiHeaderBuilder
      */
     private header() {
-        return `<h1>${this.title} API</h1>` +
+        return `<h1>${this.title} API</h1>\n` +
                `<p>${this.description}</p>`;
     }
 
@@ -38,6 +38,6 @@ export class HttpApi implements Api {
             let resourceHtmlBuilder = new ResourceHtmlBuilder(res);
             cache.push(resourceHtmlBuilder.docs())
         }
-        return cache.join('');
+        return cache.join('\n');
     }
 }
