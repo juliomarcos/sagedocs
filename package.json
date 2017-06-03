@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "ts-node": "^3.0.4"
+  },
+  "devDependencies": {
+    "chai-html": "^1.1.4",
+    "tslint": "^5.4.2",
+    "typescript": "^2.3.4",
     "@types/chai": "^3.5.2",
     "@types/mocha": "^2.2.41",
     "chai": "^3.5.0",
     "chai-fs": "^1.0.0",
     "mocha": "^3.3.0",
-    "mocha-typescript": "^1.1.2",
-    "ts-node": "^3.0.4",
-    "typescript": "^2.3.2"
+    "mocha-typescript": "^1.1.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "mocha -r ts-node/register test/*.ts",
     "start": "ts-node src/index.ts"
